@@ -1,0 +1,35 @@
+import { renderizarProjetos } from "./modules/projetos.js";
+
+import { inicializarMascaras } from "./modules/mascaras.js";
+
+import { inicializarToast } from "./modules/toast.js";
+
+import { inicializarFormulario } from "./modules/formulario.js";
+
+import { inicializarModal } from "./modules/modal.js";
+
+import { inicializarSPA } from "./modules/router.js";
+
+function inicializarInteracoes() {
+  renderizarProjetos();
+  inicializarMascaras();
+  inicializarToast();
+  inicializarFormulario();
+  inicializarModal();
+}
+
+function iniciarAplicacao() {
+  const spaAtivada = inicializarSPA(inicializarInteracoes);
+
+  if (!spaAtivada) {
+    inicializarInteracoes();
+  }
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", iniciarAplicacao, {
+    once: true,
+  });
+} else {
+  iniciarAplicacao();
+}
