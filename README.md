@@ -36,18 +36,40 @@ A aplicação representa o site de uma organização da sociedade civil fictíci
 
 ```text
 Projeto-ONG-Esperanca/
-├── html/
-│   ├── index.html
-│   ├── projetos.html
-│   └── cadastro.html
 ├── css/
 │   └── styles.css
+│
+├── html/
+│   ├── cadastro.html
+│   ├── index.html
+│   └── projetos.html
+│
+├── imagens/
+│   ├── ong-comunidade.jpg
+│   └── ong-comunidade.webp
+│
 ├── js/
 │   ├── app.js
 │   └── modules/
-├── imagens/
+│       ├── contraste.js
+│       ├── formulario.js
+│       ├── mascaras.js
+│       ├── modal.js
+│       ├── projetos.js
+│       ├── router.js
+│       ├── storage.js
+│       └── toast.js
+│
+├── scripts/
+│   ├── medir-build.mjs
+│   └── minify-html.mjs
+│
+├── .gitignore
+├── package-lock.json
+├── package.json
 ├── README.md
-└── .git/
+├── vercel.json
+└── vite.config.js
 ```
 
 A separação das pastas segue o princípio de **separação de responsabilidades**, mantendo marcação, estilos, scripts e recursos visuais organizados individualmente.
