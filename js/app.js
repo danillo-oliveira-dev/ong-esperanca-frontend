@@ -10,6 +10,8 @@ import { inicializarModal } from "./modules/modal.js";
 
 import { inicializarSPA } from "./modules/router.js";
 
+import { inicializarContraste } from "./modules/contraste.js";
+
 function inicializarInteracoes() {
   renderizarProjetos();
   inicializarMascaras();
@@ -19,6 +21,8 @@ function inicializarInteracoes() {
 }
 
 function iniciarAplicacao() {
+  inicializarContraste();
+
   const spaAtivada = inicializarSPA(inicializarInteracoes);
 
   if (!spaAtivada) {
