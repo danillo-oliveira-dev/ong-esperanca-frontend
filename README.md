@@ -147,11 +147,60 @@ A primeira versão de desenvolvimento registrada foi:
 v0.1.0
 ```
 
-## Execução para produção
+## Pré-requisitos
 
-Atualmente, o projeto é uma aplicação **front-end estática** e não necessita de instalação de dependências NPM para funcionar.
+Antes de executar o projeto, certifique-se de ter instalado:
 
-A preparação específica de **build, otimização e deploy** será realizada durante a etapa de produção do projeto.
+- Node.js
+- npm
+
+## Build e execução
+
+Instale as dependências do projeto:
+
+```bash
+npm install
+```
+
+Para executar em ambiente de desenvolvimento:
+
+```bash
+npm run dev
+```
+
+Para gerar a build otimizada de produção:
+
+```bash
+npm run build
+```
+
+A build é processada pelo **Vite**, e os arquivos finais são gerados na pasta `dist`.
+
+O HTML também passa por uma etapa adicional de minificação utilizando o **html-minifier-terser**.
+
+Para testar localmente a versão de produção:
+
+```bash
+npm run preview
+```
+
+## Deploy
+
+A aplicação está publicada na **Vercel**, com integração automática ao repositório GitHub.
+
+### Produção
+
+[https://ong-esperanca-frontend.vercel.app](https://ong-esperanca-frontend.vercel.app)
+
+A branch `main` representa a versão estável utilizada no ambiente de produção.
+
+Novas alterações enviadas para essa branch acionam automaticamente o processo de **build e deploy pela Vercel**.
+
+## Versão estável
+
+**Versão atual:** `v1.0.1`
+
+Esta versão inclui a correção das rotas da **SPA (Single Page Application)** identificada após o primeiro deploy em produção.
 
 ## Autor
 
