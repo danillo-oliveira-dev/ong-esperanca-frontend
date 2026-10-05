@@ -2,8 +2,8 @@ import { lerEstadoSalvo, salvarEstado } from "./storage.js";
 
 const rotas = {
   inicio: null,
-  projetos: "projetos.html",
-  cadastro: "cadastro.html",
+  projetos: "/html/projetos.html",
+  cadastro: "/html/cadastro.html",
 };
 
 const titulos = {
