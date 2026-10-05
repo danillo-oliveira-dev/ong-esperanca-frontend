@@ -21,15 +21,7 @@ function inicializarInteracoes() {
 }
 
 function iniciarAplicacao() {
-  function iniciarAplicacao() {
-    inicializarContraste();
-
-    const spaAtivada = inicializarSPA(inicializarInteracoes);
-
-    if (!spaAtivada) {
-      inicializarInteracoes();
-    }
-  }
+  inicializarContraste();
 
   const spaAtivada = inicializarSPA(inicializarInteracoes);
 
