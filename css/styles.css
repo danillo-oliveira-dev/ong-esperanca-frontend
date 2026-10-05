@@ -641,3 +641,98 @@ form .campo-invalido {
     margin-left: 158px;
   }
 }
+
+/* Botão de acessibilidade */
+.botao-contraste {
+  margin-top: var(--espaco-2);
+}
+
+@media (min-width: 768px) {
+  .botao-contraste {
+    margin-top: 0;
+  }
+}
+
+/* Modo de alto contraste */
+html.alto-contraste {
+  color-scheme: dark;
+}
+
+html.alto-contraste body {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+html.alto-contraste a {
+  color: #ffff00;
+  text-decoration: underline;
+}
+
+html.alto-contraste article,
+html.alto-contraste fieldset,
+html.alto-contraste .modal,
+html.alto-contraste .dropdown-menu {
+  color: #ffffff;
+  background-color: #000000;
+  border-color: #ffffff;
+}
+
+html.alto-contraste form input:not([type="radio"]),
+html.alto-contraste form select {
+  color: #ffffff;
+  background-color: #000000;
+  border: 2px solid #ffffff;
+}
+
+html.alto-contraste button,
+html.alto-contraste .modal-link {
+  color: #000000;
+  background-color: #ffff00;
+  border: 2px solid #ffff00;
+}
+
+html.alto-contraste .badge {
+  color: #000000;
+  background-color: #ffff00;
+}
+
+html.alto-contraste .alerta {
+  color: #000000;
+  background-color: #ffff00;
+  border-color: #000000;
+}
+
+html.alto-contraste .toast {
+  color: #000000;
+  background-color: #b6ffb6;
+}
+
+html.alto-contraste .erro-campo {
+  color: #ffb3b3;
+}
+
+html.alto-contraste form .campo-valido {
+  background-color: #000000;
+  border-color: #b6ffb6;
+}
+
+html.alto-contraste form .campo-invalido {
+  background-color: #000000;
+  border-color: #ffb3b3;
+}
+
+html.alto-contraste .menu-lista a:hover,
+html.alto-contraste .menu-lista a:focus-visible,
+html.alto-contraste .menu-lista a[aria-current="page"] {
+  color: #000000;
+  background-color: #ffff00;
+}
+
+html.alto-contraste .menu-hamburguer span:not(.sr-only) {
+  background-color: #ffffff;
+}
+
+html.alto-contraste :focus-visible {
+  outline: 3px solid #00ffff !important;
+  outline-offset: 3px;
+}
